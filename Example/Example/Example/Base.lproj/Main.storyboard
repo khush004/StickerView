@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SF-t7-qL5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="At2-YV-cl1"/>
+                                    <constraint firstAttribute="height" constant="44" id="UlQ-au-Omg"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="StickerTextView" id="jOh-To-s5y">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="dJd-16-rl0">
+                                            <connections>
+                                                <action selector="onAddLabel:" destination="BYZ-38-t0r" id="udT-n9-bma"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="save" id="2LM-Gw-SbZ">
+                                                <connections>
+                                                    <action selector="onSaveImage:" destination="BYZ-38-t0r" id="B4s-VW-t5Z"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="refresh" id="el3-yA-Sjv">
+                                                <connections>
+                                                    <action selector="onRefreshColor:" destination="BYZ-38-t0r" id="55q-7O-fFG"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" systemItem="refresh" id="DBA-ss-GgL">
+                                                <connections>
+                                                    <action selector="onRefreshFont:" destination="BYZ-38-t0r" id="OxQ-lh-zLU"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="refresh" id="wmN-TG-V4j">
+                                                <connections>
+                                                    <action selector="onRefreshTextAlpha:" destination="BYZ-38-t0r" id="NIw-cS-Suz"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="refresh" id="9Aj-3E-Cra">
+                                                <connections>
+                                                    <action selector="onRefreshLineSpacing:" destination="BYZ-38-t0r" id="SDn-do-2q1"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="refresh" id="5iN-1j-EXz">
+                                                <connections>
+                                                    <action selector="onRefreshShadow:" destination="BYZ-38-t0r" id="snp-iE-dba"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UlQ-au-Omg"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" fixedFrame="YES" image="bridge" translatesAutoresizingMaskIntoConstraints="NO" id="8dV-8z-18R" customClass="JLStickerImageView" customModule="JLStickerTextView">
+                                <rect key="frame" x="0.0" y="111" width="375" height="556"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2SF-t7-qL5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="F8r-Nk-COO"/>
+                            <constraint firstItem="2SF-t7-qL5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IAz-Fx-DYL"/>
+                            <constraint firstAttribute="trailing" secondItem="2SF-t7-qL5" secondAttribute="trailing" id="Vjd-9v-03a"/>
+                            <constraint firstItem="2SF-t7-qL5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wff-hK-241"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IAz-Fx-DYL"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="stickerView" destination="8dV-8z-18R" id="pTg-Ki-wwt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="415"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bridge" width="6000" height="4000"/>
+    </resources>
+</document>
